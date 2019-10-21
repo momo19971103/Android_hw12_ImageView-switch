@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
+boolean CP =false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +16,13 @@ public class MainActivity extends AppCompatActivity {
     }
     public void ChangePeople(View v){
         ImageView imageview = findViewById(R.id.imageView);
-        imageview.setImageResource(R.drawable.i20191008003110);
-
+        if (CP==false){
+            imageview.setImageResource(R.drawable.i20191008003110);
+            CP=true;
+        }
+        else {
+            imageview.setImageResource(R.drawable.d2216733);
+            CP=false;
+        }
     }
 }
